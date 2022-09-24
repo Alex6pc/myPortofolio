@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="photos/portfolioIcon.png">
+
+    </head>
+    <body>
+        
+        <!-- Start Navbar -->
+        <nav class="navbarSection">
+            <ul class="linksNav">
+                <li class="link active"><a href="#">home</a></li>
+                <li class="link "><a href="#projectSectionID">projects</a></li>
+                <li class="link "><a href="#aboutSectionID">about</a></li>
+                <li class="link "><a href="#skillSectionID">skills</a></li>
+                <!-- <li class="link "><a href="#contactSectionID">contact</a></li> -->
+            </ul>
+        </nav>
+        <!-- End Navbar -->
+        
+        <!-- Start Home Section-->
+        <section class="homeSection active">
+            <div class="heroText">
+                <h1 class="heroHead">Hello, i am <br> Alex</h1>
+             <div class="pLoadingAnim">
+                <p>A future Developer</p>
+              </div>
+
+              <div class="homeSection-downloadCv" >
+                <a class="downloadCv-btn-hero" href="photos/Lebenslauf.pdf" download> Download CV </a>
+
+                <!-- <form method="get" action="photos/Lebenslauf.pdf">
+                    <button download class="downloadCv-btn-hero" >Download CV</button> 
+                 </form> -->
+                <p class="aboutInfoHero">Email-Adresse: alex-notis@outlook.com</p>
+             </div>
+            </div>
+            
+            
+              <img class="heroPhoto"src="/photos/heroPhoto.png" alt="PhotoOfHero">
+        </section>
+        <!-- END Home Section-->
+        
+        <!-- Start Projects Section-->
+        <section class="projectSection " id="projectSectionID">
+            <h1 class="projectHead">some of my mini projects</h1>
+            <div class="projectCont">
+                <div class="projectCard">
+                    <img class="projectPhoto" src="/photos/SimonGame.png" alt="projectPhoto">
+                    <div class="projectContent">
+                        <h1 class="projectTitle">project 01</h1>
+                        <p class="projectInfo">
+                            Play the Simon game
+                        </p>
+                        <div class="projectBtnGroup">
+                            <button onclick="window.open('https://github.com/Alex6pc/SimonGame');" target="_blank" class="projectBtn github">github repo</button>
+                            <button onclick="window.open('https://alex6pc.github.io/SimonGame/');" target="_blank" class="projectBtn live">see live</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img class="projectPhoto" src="/photos/dicePlay.png" alt="projectPhoto">
+                    <div class="projectContent">
+                        <h1 class="projectTitle">project 02</h1>
+                        <p class="projectInfo">
+                            Dice rolling game
+                        </p>
+                        <div class="projectBtnGroup">
+                            <button onclick="window.open('https://github.com/Alex6pc/dicesroll');" target="_blank" class="projectBtn github">github repo</button>
+                            <button onclick="window.open('https://alex6pc.github.io/dicesroll/');" target="_blank" class="projectBtn live">see live</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img class="projectPhoto" src="/photos/drums.png" alt="projectPhoto">
+                    <div class="projectContent">
+                        <h1 class="projectTitle">project 03</h1>
+                        <p class="projectInfo">
+                            Play the Drums
+                        </p>
+                        <div class="projectBtnGroup">
+                            <button onclick="window.open('https://github.com/Alex6pc/drumKit');" target="_blank" class="projectBtn github">github repo</button>
+                            <button onclick="window.open('https://alex6pc.github.io/drumKit/');" target="_blank" class="projectBtn live">see live</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img class="projectPhoto" src="/photos/timer.png" alt="projectPhoto">
+                    <div class="projectContent">
+                        <h1 class="projectTitle">project 04</h1>
+                        <p class="projectInfo">
+                            Timer
+                        </p>
+                        <div class="projectBtnGroup">
+                            <button onclick="window.open('https://github.com/Alex6pc/TImer');" target="_blank" class="projectBtn github">github repo</button>
+                            <button onclick="window.open('https://alex6pc.github.io/TImer/');" target="_blank" class="projectBtn live">see live</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END Projects Section-->
+        
+        <!-- Start About Section-->
+        <section class="aboutSection"  id="aboutSectionID">
+            <div class="about">
+                <div class="aboutPhotoContainer">
+                    <img class="aboutPhoto" src="/photos/heroPhoto2.png" alt="">
+                    <a class="downloadCv-btn" href="photos/Lebenslauf.pdf" download> Download CV </a>
+                </div>
+                <p class="aboutInfo">
+                    <br>Mein Name ist Alexandros Notis und ich komme aus Griechenland. 
+                    Nachdem ich 5 Jahre als Koch tätig war, habe ich mich entschieden
+                    in die IT Branche zu wechseln. Seit 7 Monaten nehme ich an einer Umschulung
+                    zum Anwendungsentwickler teil.<br><br> Da ich mich sehr für das Thema Programmierung 
+                    interessiere, beschäftige ich mich seit 1 Jahr mit der Programmiersprache Javascript
+                    und HTML/CSS. Ich finde den Bereich Webentwicklung besonders interessant.
+                    <br><br>
+                    Momemtan bin ich auf der Suche nach einem Praktikumplatz von 17. April bis 20. Oktober
+                    in dem ich mein gelerntes Wissen anwenden und vertiefen kann.
+                    Neben meiner hohen Motivation bin ich noch kreativ und lerne gerne Neues dazu.</p>       
+            </div>
+
+            <!-- Start SKILLS-->
+            <div class="skillsSection" id="skillSectionID">
+                    <h1 class="head">skills</h1>
+                <div class="skillsContainer">
+                    <div class="skillCard">
+                        <img class="skillPhoto" src="/photos/html.png" alt="skillsPhotos">
+                        <div class="skillLvl"><p> 70%</p></div> 
+                        <h1 class="skillName">HTML</h1>
+                    </div>
+                    <div class="skillCard">
+                        <img class="skillPhoto" src="/photos/css.png" alt="skillsPhotos">
+                        <div class="skillLvl"><p>50%</p></div> 
+                        <h1 class="skillName">CSS</h1>
+                    </div>
+                    <div class="skillCard">
+                        <img class="skillPhoto" src="/photos/js.png" alt="skillsPhotos">
+                        <div class="skillLvl"><p> 45%</p></div> 
+                        <h1 class="skillName">JS</h1>
+                    </div>
+                    <div class="skillCard">
+                        <img class="skillPhoto" src="/photos/cSha.png" alt="skillsPhotos">
+                        <div class="skillLvl"><p>0%</p></div> 
+                        <h1 class="skillName">C#</h1>
+                    </div>
+                    <div class="skillCard">
+                        <img class="skillPhoto" src="/photos/sqlLogo.png" alt="skillsPhotos">
+                        <div class="skillLvl"><p>35%</p></div> 
+                        <h1 class="skillName">SQL</h1>
+                    </div>
+                    <div class="skillCard">
+                        <img class="skillPhoto" src="/photos/angular.png" alt="skillsPhotos">
+                        <div class="skillLvl"><p>0%</p></div> 
+                        <h1 class="skillName">Angular</h1>
+                        <p class="skillINfo"></p>                           
+                    </div>           
+                </div>
+            </div>
+              <!-- END SKILLS--> 
+        </section>
+        <!-- END About Section-->
+        <!-- Start Contact Section-->
+        <!-- <section class="contactSection" id="contactSectionID">
+                <form class="contactForm">
+                    <input type="text" name="name" id="name" autocomplete="off" placeholder="name">
+                    <input type="text" name="email" id="email" autocomplete="off" placeholder="email">
+                    <textarea name="msg" id="msg" placeholder="message" autocomplete="off"></textarea>
+                    <button  class="formSumbitBtn" type="submit">contact</button>
+                </form>
+        </section> -->
+        <!-- END Contact Section -->
+         <script src="script.js"></script>
+    </body>
+</html>

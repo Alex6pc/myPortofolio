@@ -1,0 +1,697 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #191919;
+    font-family: sans-serif;
+}
+
+/* NAVBAR ------------------------- */
+.navbarSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.linksNav{
+    display: flex;
+    list-style:none;
+}
+.link a{
+    color: #fff;
+    opacity: 0.6;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: 0.5s;
+    font-size: 19px;
+}
+.link a:hover, .link.active a{
+    opacity: 1;
+    color: #61bdb6;
+}
+/* END - NAVBAR ------------------------- */
+
+/* START - Home Section ------------------------- */
+.homeSection.active,
+.projectSection.active
+.about{
+    position: relative;
+    opacity: 1;
+    z-index: 8;
+}
+.homeSection{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    transition: 1;
+}
+.heroHead{
+    color: #fff;
+    font-size: 125px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.heroPhoto{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    top: 13%;
+    right: 0;
+    object-fit: cover;
+    opacity: 0.4;
+}
+.homeSection-downloadCv{
+    position: relative;
+    top: 96px;
+ 
+}
+.downloadCv-btn-hero{
+    color: rgba(255, 15, 15, 0.733);
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .4s;
+    background: rgba(20, 19, 19, 0.5);
+    padding: 20px;
+  
+}
+.downloadCv-btn-hero:hover{
+    background: rgb(255, 250, 250);
+}
+.aboutInfoHero{
+    color: #fff;
+    opacity: 0.5;
+    font-size: 20px;
+    position: relative;
+    top: 40px;
+}
+/* ANIMATION START FOR TEXT in Home Section */
+.pLoadingAnim {
+    font-family: sans-serif;
+    text-transform:uppercase;
+    margin-top: 50px;
+    width: 400px;
+    text-align: left;
+    transform: translateY(-50%);
+  }
+  .pLoadingAnim p {
+    position:relative;
+    z-index: 20;
+    color:#191919;
+    font-size: 35px;
+    margin: auto;
+  }
+  .pLoadingAnim:before {
+    content:'';
+    background:#61bdb6;
+    width: 390px;
+    height: 80px;
+    margin: auto;
+    display: block;
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    animation:3s pLoadingAnim infinite ease-in-out;
+  }
+  @keyframes pLoadingAnim {
+    0%   {transform:translateX(-14px);}
+    50%  {transform:translateX(14px);}
+    100% {transform:translateX(-14px);}
+  }
+  @keyframes pLoadingAnim {
+    0%   {transform:translateX(-50px);}
+    50%  {transform:translateX(50px);}
+    100% {transform:translateX(-50px);}
+  }
+/* ANIMATION END FOR TEXT in Home Section */
+
+/* END - Home Section ------------------------- */
+
+/* START - Projects Section ------------------------- */
+
+.projectSection{
+    width: 100%;
+    min-height: 100vh;
+    padding: 250px 100px 100px;
+    top: 0;
+    transition: 1s;
+}
+.projectHead{
+    font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+.projectCont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+.projectCard{
+    position: relative;
+    height: 400px;
+}
+.projectPhoto{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+}
+.projectContent{
+    position: relative;
+    padding: 19px;
+    color: #fff;
+    transform: .5s;
+    opacity: 0;
+}
+.projectTitle{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+.projectInfo{
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.projectBtnGroup{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.projectBtn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.projectBtn.live{
+    background: none;
+    border: 2px solid #fff;
+}
+.projectCard:hover .projectPhoto{
+    filter: blur(20px);
+}
+.projectCard:hover .projectContent{
+    opacity: 1;
+}
+.projectBtn.github:hover {
+    background: none;
+    border: 2px solid #fff;
+}
+
+/* END - Projects Section ------------------------- */
+
+/* START - About Section ------------------------- */
+.aboutSection{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 0;
+    position: relative;
+    top: 0;
+    transition: 1s;
+}
+.about{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    grid-gap: 40px;
+}
+.aboutInfo{
+    color: #fff;
+    opacity: 0.5;
+    font-size: 20px;
+    line-height: 40px;
+}
+.aboutPhoto{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+.downloadCv-btn{
+    position: relative;
+    bottom: 100px;
+    left: 25%;
+    transform: translateX(-50%);
+    color: rgb(255, 15, 15);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .4s;
+    background: rgba(20, 19, 19, 0.5);
+    padding: 20px;
+    text-decoration: none;
+}
+.downloadCv-btn:hover{
+    background: #000;
+}
+/* START Skills section inside About Section ------------------------- */
+
+.skillsSection{
+    position: relative;
+    margin: 100px 0;
+}
+.head{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+.skillsContainer{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    color: #fff;
+}
+.skillCard{
+    position: relative;
+
+}
+.skillPhoto{
+    height: 200px;
+    margin: auto;
+    display: block;
+}
+.skillName{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 30px 0 20px;
+}
+.skillInfo{
+    text-align: center;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 30px;
+}
+.skillLvl{
+    position: absolute;
+    top: 80px;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 10px solid #000;
+}
+.skillLvl p{
+    margin: auto;
+}
+.skillCard:nth-child(1) .skillLvl{
+    background: #ff4f4f28;
+    border-color: #ff4f4f;
+    color: #ff4f4f;
+}
+.skillCard:nth-child(2) .skillLvl{
+    background: #4fa0ff28;
+    border-color: #4fa0ff;
+    color: #4fa0ff;
+}
+.skillCard:nth-child(3) .skillLvl{
+    background: #ffed4f28;
+    border-color: #ffed4f;
+    color: #ffed4f;
+}
+.skillCard:nth-child(4) .skillLvl{
+    background: #52ff4f28;
+    border-color: #52ff52;
+    color: #52ff52;
+}
+.skillCard:nth-child(5) .skillLvl{
+    background: #4fdfff28;
+    border-color: #4fdfff;
+    color: #4fdfff;
+}
+.skillCard:nth-child(6) .skillLvl{
+    background: #ff4f4f28;
+    border-color: #ba2323;
+    color: #ba2323;
+}
+/* END Skills section inside About Section ------------------------- */
+/* END - About Section ------------------------- */
+
+/* START - Contact Section ------------------------- */
+
+.contactSection{
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-gap: 50px;
+    position: relative;
+    top: 0;
+    transition: 1s;
+    padding: 100px 150px;
+  
+}
+
+.contactForm input, .contactForm textarea{
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 5px 10px;
+}
+.contactForm{
+    margin: auto;
+}
+
+::placeholder{
+    color: #fff;
+}
+#msg{
+    height: 280px;
+    resize: none;
+    font-family: sans-serif;
+}
+.formSumbitBtn{
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .4s;
+    background: rgba(222, 48, 48, 0.5);
+    padding: 18px 40px;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    margin: auto;
+    text-transform: capitalize;
+}
+.formSumbitBtn:hover{
+    background: #000;
+}
+
+/* MEDIUM RESOLUTION -------------------------------------------*/
+
+@media screen and (max-width: 961px) {
+
+    /* Start -- HomeSection */
+
+    .homeSection{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 100px 0 0 0;
+        height: 70vh;
+        top: 0;
+        opacity: 0;
+        transition: 1;
+    }
+    .heroText{
+        width:100%;
+        text-align: center;
+    }
+    .heroHead{
+        color: #fff;
+        font-size: 105px;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin: auto;  
+    }
+    .pLoadingAnim{
+        margin: 80px auto 0; 
+    }
+    .heroPhoto{
+        display: none;
+    }
+    /* End -- HomeSection */
+
+    /* Start -- ProjectSection */
+    .projectSection{
+        width: 100%;
+        padding: 0px 100px 100px;
+        top: 0;
+        transition: 1s;
+    }
+    .projectSection
+    .projectCont{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 100px;
+    }
+    .projectSection .projectInfo{
+        width: 400px;
+    }
+    .projectHead{
+        font-size: 80px;
+        margin: 100px 0;
+    }
+    /* End -- ProjectSection */
+
+    /* Start -- AboutSection */
+    
+    .aboutSection{
+        width: 100%;
+        min-height: 100vh;
+        padding: 150px 100px 0;
+        position: relative;
+        top: 0;
+        transition: 1s;
+    }
+    .about{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 140px;
+    }
+   
+    /* End -- AboutSection */
+
+    /* Start -- SkillSection */
+    .skillsSection{
+        position: relative;
+        margin: 100px 0;
+    }
+    .head{
+        text-align: center;
+        font-size: 60px;
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: 100px;
+    }
+    .skillsContainer{
+        width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px;
+        color: #fff;
+    }
+    .homeSection-downloadCv{
+        position: relative;
+        top: 30px;
+    }
+    .aboutInfoHero{
+        position: relative;
+        top: 50px;
+    }
+
+    /* END Skills section inside About Section ------------------------- */
+  }
+
+@media screen and (max-width:641px){
+        /* Start -- HomeSection */
+        .navbarSection{
+            display: none;
+        }
+        .homeSection{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            height: 50vh;
+            top: 0;
+            opacity: 0;
+            transition: 1;
+        }
+        .heroHead{
+            color: #fff;
+            font-size: 60px;
+            text-transform: capitalize;
+            font-weight: 300;
+            margin: auto;  
+        }
+        /* End -- HomeSection */
+    
+        /* Start -- ProjectSection */
+        .projectSection
+        .projectCont{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 100px;
+        }
+        .projectHead{
+            font-size: 80px;
+            margin: 100px 0;
+        }
+        .projectSection .projectInfo{
+            width: 250px;
+        }
+        /* End -- ProjectSection */
+    
+        /* Start -- AboutSection */
+        .aboutSection{
+            width: 100%;
+            min-height: 100vh;
+            padding: 150px 100px 0;
+            position: relative;
+            top: 0;
+            transition: 1s;
+        }
+        .about{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 140px;
+        }
+       
+        /* End -- AboutSection */
+
+        /* Start -- SkillsSection */
+
+        .skillsContainer{
+            width: 95%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 100px;
+            color: #fff;
+        }
+        /* End -- SkillsSection */
+        .homeSection-downloadCv{
+            position: relative;
+            top: 40px;
+         
+        }
+}
+@media screen and (max-width:500px){
+    /* Start -- HomeSection */
+    .navbarSection{
+        display: none;
+    }
+    .homeSection{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: 50vh;
+        top: 0;
+        opacity: 0;
+        transition: 1;
+    }
+    .heroHead{
+        color: #fff;
+        font-size: 60px;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin: auto;  
+    }
+    /* End -- HomeSection */
+
+    /* Start -- ProjectSection */
+    .projectSection
+    .projectCont{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 50px;
+        margin: auto;
+    }
+    .projectCard{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+    .projectSection .projectInfo{
+        display: none;
+    }
+    .projectHead{
+        font-size: 50px;
+        margin: 100px 0;
+    }
+    
+   
+    /* End -- ProjectSection */
+
+    /* Start -- AboutSection */
+    .aboutSection{
+        width: 100%;
+        min-height: 80vh;
+        padding: 0 100px 0;
+        position: relative;
+        transition: 1s;
+    }
+    .about{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .aboutInfo{
+        margin-top: -80px;
+        font-size: 16px;
+    }
+    .aboutPhoto{
+        height: 440px;
+    }
+   
+    /* End -- AboutSection */
+
+    /* Start -- SkillsSection */
+
+    .skillsContainer{
+        max-width: 95%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 100px;
+        color: #fff;
+    }
+    /* End -- SkillsSection */
+}
+
+
+/* @media (min-width:320px)  { smartphones, iPhone, portrait 480x320 phones }
+/* @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.  } */
