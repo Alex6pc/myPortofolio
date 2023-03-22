@@ -74,8 +74,8 @@ body{
 .heroPhoto{
     position: absolute;
     width: 50%;
-    height: 80vh;
-    top: 13%;
+    height: 120vh;
+    top: 15%;
     right: 0;
     object-fit: cover;
     opacity: 0.4;
